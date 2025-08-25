@@ -1,0 +1,40 @@
+.card{
+  width: 550px;
+  background-color: #FEF7F7;
+  padding: 1.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: x-large;
+  margin-block: 1rem;
+}
+
+.descricao {
+  font-style: italic;
+  color: gray;
+  font-size: small;
+}
+
+.content {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+.form {
+  width: 70%;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+

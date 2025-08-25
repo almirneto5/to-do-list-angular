@@ -1,0 +1,37 @@
+<div>
+  <mat-card class="card" appearance="outlined">
+    <div class="header">
+      <mat-card-title class="titulo">Lista de tarefas</mat-card-title>
+      <mat-card-subtitle class="descricao"
+        >Clique na tarefa adicionada para marca-la como concluída</mat-card-subtitle
+      >
+    </div>
+
+    <div class="content">
+      <form class="form">
+        <mat-form-field class="mat-form-field">
+          <mat-label>Tarefa</mat-label>
+          <input
+            #taskInputRef
+            type="text"
+            class="input"
+            matInput
+            placeholder="Ex. Comprar leite"
+            (keyup.enter)="addTask()"
+          />
+        </mat-form-field>
+      </form>
+      <button matButton="filled" (click)="addTask()">Adicionar</button>
+    </div>
+
+    <app-task-list #taskListComponent [tasks]="tasks" (taskToggled)="onTaskToggled($event)">
+    </app-task-list>
+
+    <app-footer-action-bar
+      (clearListClicked)="onClearListClicked()"
+      (clearCompletedClicked)="onClearCompletedClicked()"
+      (saveClicked)="onSaveClicked()"
+    >
+    </app-footer-action-bar>
+  </mat-card>
+</div>

@@ -1,0 +1,7 @@
+<mat-chip-listbox multiple class="mat-mdc-chip-set-stacked" aria-label="Lista de tarefas">
+  @for (task of tasks; track task.id) {
+  <mat-chip-option [selected]="task.completed" (click)="toggleTaskCompletion(task)">
+    {{ task.name }}
+  </mat-chip-option>
+  }
+</mat-chip-listbox>
