@@ -74,30 +74,25 @@ export class CardPrincipal implements OnInit {
     this.tasks.push(newTask);
     this.taskInputRef.nativeElement.value = '';
 
-    this.saveTasksToLocalStorage();
   }
 
   onTaskToggled(task: Task) {
     task.completed = !task.completed;
 
-    this.saveTasksToLocalStorage();
   }
 
   onClearListClicked() {
     this.tasks = []; 
 
-    this.saveTasksToLocalStorage();
   }
 
   onClearCompletedClicked() {
     this.tasks = this.tasks.filter((task) => !task.completed);
 
-    this.saveTasksToLocalStorage();
   }
 
   onSaveClicked() {
     this.saveTasksToLocalStorage();
-    alert('Lista de tarefas salva com sucesso!');
   }
 
   private generateId(): string {
